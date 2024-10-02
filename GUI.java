@@ -10,14 +10,8 @@ import javax.swing.JPanel;
 
 public class GUI {
 	
+	
 	//GUIじゃなくてパネルAクラスでもいいかも
-//	static ArrayList<Integer> NumList = new ArrayList<>();
-	
-	
-	
-
-
-
 
 	GUI() {
 		Input.NumList = new ArrayList<>();
@@ -28,23 +22,15 @@ public class GUI {
 		//1ボタン 説明用
 		JButton b1 = new JButton("1");
 		pane.add(b1);
-		//ActionListenerのactionPerformedメソッドを実装し実行
-		ActionListener al1 = new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent ae) {
-				//1が押されたらリストに１を追加
-				Input.NumList.add(1);
-				System.out.println("1");
-			}
-		};
-		b1.addActionListener(al1);
+		//ActionListenerのactionPerformedメソッドを実装しInput.makeALNum(3)
+		b1.addActionListener(Input.makeALNum(1));
 		
 		//２ボタン
 		JButton b2 = new JButton("2");
 		pane.add(b2);
 		//ActionListenerのactionPerformedメソッドを実装しInput.makeALNum(3)
 		//
-		b2.addActionListener(Input.makeALNum(3));
+		b2.addActionListener(Input.makeALNum(2));
 		
 		
 		//３ボタン
