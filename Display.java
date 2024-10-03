@@ -19,12 +19,17 @@ public class Display extends JFrame implements ActionListener {
 	private StringBuilder inputBuilder;  // 入力値を保持する
 	private CalcTester tester; // CalcTesterへの参照
 
+	
+	//プッシュ確認用テキスト
+	
+	
+	
 	public Display(CalcTester tester) {
 		this.tester = tester; // CalcTesterを保存
 		inputBuilder = new StringBuilder();
 
 		// フレーム設定
-		setTitle("電卓");
+		setTitle("多機能電卓");
 		setSize(400, 500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
