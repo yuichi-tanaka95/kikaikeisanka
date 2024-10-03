@@ -7,6 +7,8 @@ import Display.Display;
 import Input.Input;
 
 public class CalcTester {
+	
+	//10:49元木更新テスト
 
 	private Input input;
 	private Calc calc;
