@@ -9,6 +9,7 @@ import Input.Input;
 public class CalcTester {
 	
 	//10:49元木更新テスト
+	//村田テスト
 
 	private Input input;
 	private Calc calc;
