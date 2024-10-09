@@ -1,4 +1,4 @@
-package dentakuVol20.CalcTester;
+package CalcTester;
 
 import java.awt.BorderLayout;
 import java.util.List;
@@ -6,9 +6,9 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
 
-import dentakuVol20.Calc.Calc;
-import dentakuVol20.Display.Display;
-import dentakuVol20.Input.Input;
+import Calc.Calc;
+import Display.Display;
+import Input.Input;
 
 public class CalcTester {
 
@@ -23,7 +23,6 @@ public class CalcTester {
 		Display.mainFrame = new JFrame();
 		// フレーム設定
 		Display.mainFrame.setTitle("電卓");
-		/*松崎　始め　下記一行　サイズのみ*/
 		Display.mainFrame.setSize(400, 370); //レイアウトに合わせてサイズ変更してます
 		Display.mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Display.mainFrame.setLayout(new BorderLayout());
@@ -51,21 +50,16 @@ public class CalcTester {
 	// 電卓画面を表示
 	public void start() {
 		Display.mainFrame.setVisible(true);
-		
 	}
-	/*松崎　↓*/
 	public void addNewTab(String tabName, Display display) {
 		Display.mainFrame.add(originTabbedPane, BorderLayout.NORTH);
 		//大元のタブにdisplay2を追加
 		originTabbedPane.addTab(tabName,display.getTabPanel());
 	}
-	/*松崎　↑*/
-	
-	
+
 	// 入力された数式を処理して計算結果を返す
 	public String handleInput(String expression, boolean b) {
 		// 数式をトークンに分割
-		/*松崎　下記一行*/
 		Input input = new Input();
 		List<String> tokens = input.tokenize(expression);
 		
@@ -76,7 +70,6 @@ public class CalcTester {
 		
 		try {
 		// トークンをCalcに渡して計算
-		/*松崎　下記一行*/
 		Calc calc = new Calc(); 
 		double result = calc.evaluate(tokens);
 		
@@ -90,9 +83,14 @@ public class CalcTester {
 			return "Error";
 		}
 	}
-
 	public static void main(String[] args) {
 		CalcTester tester = new CalcTester();
 		tester.start(); // 電卓画面を表示して計算を開始
+		
+		/*ウィンドウを常に手前に表示する設定*/
+		Display.mainFrame.setAlwaysOnTop(true);
+		
+		/*タブのフォーカスを無効化*/
+		originTabbedPane.setFocusable(false);
 	}
 }
