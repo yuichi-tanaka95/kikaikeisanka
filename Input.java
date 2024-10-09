@@ -1,4 +1,4 @@
-package dentakuVol20.Input;
+package Input;
 
 import java.util.ArrayList;
 import java.util.List;
