@@ -31,6 +31,9 @@
         <mxCell id="upQc3EDG4fMrsP7-_Z8--11" value="外部からの入力" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="530" y="120" width="120" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="upQc3EDG4fMrsP7-_Z8--12" value="StringBuilder&lt;div&gt;(バッファ)&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="480" y="30" width="90" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
